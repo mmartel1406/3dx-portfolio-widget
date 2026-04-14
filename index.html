@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Hub Widget</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="widget-shell">
+      <header class="hero-panel">
+        <div class="hero-copy">
+          <p class="eyebrow">3DEXPERIENCE Custom Widget Prototype</p>
+          <h1 id="portfolioTitle">Portfolio Hub</h1>
+          <p id="portfolioDescription" class="hero-description"></p>
+          <div class="hero-actions">
+            <button id="primaryActionBtn" class="primary-btn" type="button">Open Playbook</button>
+            <button id="secondaryActionBtn" class="secondary-btn" type="button">View Intake</button>
+          </div>
+        </div>
+
+        <aside class="hero-status">
+          <div class="status-card accent-card">
+            <span class="status-label">Widget Mode</span>
+            <strong id="widgetModeValue">Browser Preview</strong>
+            <p id="widgetModeDescription" class="muted">
+              Running outside the 3DEXPERIENCE container with mock context.
+            </p>
+          </div>
+          <div class="status-grid">
+            <div class="status-card">
+              <span class="status-label">Horizons</span>
+              <strong id="projectCountValue">0</strong>
+            </div>
+            <div class="status-card">
+              <span class="status-label">Roles</span>
+              <strong id="focusAreaCountValue">0</strong>
+            </div>
+            <div class="status-card">
+              <span class="status-label">Primary Apps</span>
+              <strong id="featuredCountValue">0</strong>
+            </div>
+            <div class="status-card">
+              <span class="status-label">Last Refresh</span>
+              <strong id="lastUpdatedValue">--</strong>
+            </div>
+          </div>
+        </aside>
+      </header>
+
+      <main class="content-grid">
+        <section class="panel panel-wide">
+          <div class="panel-heading">
+            <div>
+              <p class="panel-kicker">Discovery</p>
+              <h2>Choose A Horizon</h2>
+            </div>
+            <label class="search-field">
+              <span class="sr-only">Search roles</span>
+              <input id="searchInput" type="search" placeholder="Search roles, domains, codes..." />
+            </label>
+          </div>
+
+          <div class="filter-strip">
+            <div id="focusFilters" class="horizon-grid"></div>
+          </div>
+
+          <div id="projectGrid" class="project-grid"></div>
+        </section>
+
+        <section class="panel detail-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="panel-kicker">Role Detail</p>
+              <h2 id="detailTitle">Select a role</h2>
+            </div>
+            <span id="detailStatusPill" class="status-pill">Preview</span>
+          </div>
+
+          <p id="detailSummary" class="detail-summary">
+            Choose a role to inspect its primary apps, supporting apps, and the other roles where those apps also appear.
+          </p>
+
+          <div id="detailMeta" class="meta-list"></div>
+
+          <div class="detail-section">
+            <h3>Highlights</h3>
+            <ul id="detailHighlights" class="stack-list"></ul>
+          </div>
+
+          <div class="detail-section">
+            <h3>Apps</h3>
+            <div id="detailLinks" class="link-stack"></div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-heading">
+            <div>
+              <p class="panel-kicker">Resource Shelf</p>
+              <h2>Quick Links</h2>
+            </div>
+          </div>
+          <div id="resourceList" class="resource-list"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-heading">
+            <div>
+              <p class="panel-kicker">Roadmap</p>
+              <h2>Upcoming Milestones</h2>
+            </div>
+          </div>
+          <div id="milestoneList" class="milestone-list"></div>
+        </section>
+
+        <section class="panel panel-wide">
+          <div class="panel-heading">
+            <div>
+              <p class="panel-kicker">Platform Context</p>
+              <h2>3DEXPERIENCE Handshake</h2>
+            </div>
+          </div>
+
+          <div id="platformNotice" class="notice-banner"></div>
+          <div id="platformContextGrid" class="context-grid"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
